@@ -9,3 +9,8 @@ checkSum n a = digitPowSum a n 0 == a
 
 task :: Int -> Int
 task n = sum (filter (checkSum n) [1..999999])
+
+main = do
+    putStrLn "Podaj n: "
+    n <- getLine
+    print (task (read n))
